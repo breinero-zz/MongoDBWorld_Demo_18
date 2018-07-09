@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Kmeans_Demo_main" target="1.8" />
+      <module name="Kmeans_Demo_test" target="1.8" />
+      <module name="TPC-H_eComm_Workload_main" target="1.8" />
+      <module name="TPC-H_eComm_Workload_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

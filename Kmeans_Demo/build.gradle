@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+apply plugin: 'scala'
+
+ext.scalaVersion = '2.10'
+
+
+group 'com.bryanreinero'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+ext.sparkVersion = '1.6.1'
+ext.scalaVersion = '2.10'
+
+apply plugin: 'application'
+
+task getHomeDir << {
+    println gradle.gradleHomeDir
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+
+    compile "org.mongodb:mongo-java-driver:3.1.1"
+    compile ( "org.mongodb.spark:mongo-spark-connector_2.10:0.1" )
+    compile "org.apache.spark:spark-core_${scalaVersion}:${sparkVersion}"
+    compile "org.apache.spark:spark-sql_${scalaVersion}:${sparkVersion}"
+}
